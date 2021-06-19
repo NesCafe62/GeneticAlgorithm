@@ -50,7 +50,7 @@ class MyChromosome : IChromosome {
 
 class MyFitness : IFitness {
 
-    public double getFitness(IChromosome chromosome) {
+    public double CalculateFitness(IChromosome chromosome) {
         var myChromosome = (MyChromosome) chromosome;
         int counter = 0;
         // for example count how many neighbout numbers differ by only 1
