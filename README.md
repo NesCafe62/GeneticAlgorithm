@@ -1,71 +1,6 @@
 # GeneticAlgorithm
 Genetic algorithm library wtitten in С#
 
-# Selection operators
-
-## `EliteSelection()`
-
-Takes best chromosomes of generation determined by fintess function
-
-
-## `RouletteWheelSelection(Random random)`
-
-Picks chromosomes from a wheel, where probability is proportional to fintess function, until number of chromosomes in new generation match required generation size
-
-
-## `TournamentSelection(Random random, int roundSize)`
-`roundSize`: Number of chromosomes participating in each tournament round
-
-Takes winner chromosome (by fitness function) to new generation from each tournament round until new generation match required generation size. Participants are picked randomly (so same chromosome can be taken multiple times, though Clone method will guarantee unique chromosome instances in new generation)
-
-
-# Parent selection operators
-
-## `RandomParentSelection(Random random)`
-
-...
-
-
-## `InbreedingParentSelection(Random random)`
-
-...
-
-
-# Crossover operators
-
-## `SinglePointCrossover(IChromosomeFactory factory, Random random)`
-
-`factory`: chromosome factory
-
-...
-
-
-## `MultiPointCrossover(IChromosomeFactory factory, Random random, int pointsCount)`
-
-`factory`: chromosome factory
-`pointsCount`: number of chromosome split points
-
-...
-
-
-# Mutation operators
-
-## `RandomMutation<T>(IGeneFactory<T> factory, Random random) where T : IGene`
-
-`factory`: gene factory
-
-...
-
-
-## `SwapMutation<T>(Random random) where T : IGene`
-
-...
-
-
-## `ReverseMutation<T>(Random random) where T : IGene`
-
-...
-
 
 # Usage
 
@@ -245,3 +180,79 @@ ga.Run();
 int generationsCount = ga.GenerationsCount;
 var bestChromosome = (MyChromosome) ga.BestChromosome;
 ```
+
+
+# Islands genetic algorithm
+
+...
+
+
+# Selection operators
+
+## EliteSelection()
+
+Takes best chromosomes of generation determined by fintess function
+
+
+## RouletteWheelSelection(Random random)
+
+Picks chromosomes from a wheel, where probability is proportional to fintess function, until number of chromosomes in new generation match required generation size
+
+
+## TournamentSelection(Random random, int roundSize)
+`roundSize`: Number of chromosomes participating in each tournament round
+
+Takes winner chromosome (by fitness function) to new generation from each tournament round until new generation match required generation size. Participants are picked randomly (so same chromosome can be taken multiple times, though Clone method will guarantee unique chromosome instances in new generation)
+
+
+# Parent selection operators
+
+## RandomParentSelection(Random random)
+
+...
+
+
+## InbreedingParentSelection(Random random)
+
+...
+
+
+# Crossover operators
+
+## SinglePointCrossover(IChromosomeFactory factory, Random random)
+
+`factory`: chromosome factory
+
+...
+
+
+## MultiPointCrossover(IChromosomeFactory factory, Random random, int pointsCount)
+
+`factory`: chromosome factory
+`pointsCount`: number of chromosome split points
+
+...
+
+
+# Mutation operators
+
+## RandomMutation<T>(IGeneFactory<T> factory, Random random) where T : IGene
+
+`factory`: gene factory
+
+...
+
+
+## SwapMutation<T>(Random random) where T : IGene
+
+...
+
+
+## ReverseMutation<T>(Random random) where T : IGene
+
+...
+
+
+# Defining custom operators
+
+...
