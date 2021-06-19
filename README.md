@@ -200,6 +200,7 @@ Picks chromosomes from a wheel, where probability is proportional to fintess fun
 
 
 ## TournamentSelection(Random random, int roundSize)
+
 `roundSize`: Number of chromosomes participating in each tournament round
 
 Takes winner chromosome (by fitness function) to new generation from each tournament round until new generation match required generation size. Participants are picked randomly (so same chromosome can be taken multiple times, though Clone method will guarantee unique chromosome instances in new generation)
@@ -229,6 +230,7 @@ Takes winner chromosome (by fitness function) to new generation from each tourna
 ## MultiPointCrossover(IChromosomeFactory factory, Random random, int pointsCount)
 
 `factory`: chromosome factory
+
 `pointsCount`: number of chromosome split points
 
 ...
