@@ -1,5 +1,5 @@
 ﻿namespace GeneticAlgorithm {
 
-    public interface IGene { }
+	public interface IGene { }
 
 }

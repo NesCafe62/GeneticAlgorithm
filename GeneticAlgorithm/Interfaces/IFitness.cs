@@ -1,9 +1,9 @@
 ﻿namespace GeneticAlgorithm {
 
-    public interface IFitness {
+	public interface IFitness {
 		
-        double getFitness(IChromosome chromosome);
+		double СalculateFitness(IChromosome chromosome);
 
-    }
+	}
 
 }

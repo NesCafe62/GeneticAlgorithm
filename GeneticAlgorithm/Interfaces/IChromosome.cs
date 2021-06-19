@@ -1,18 +1,18 @@
 ﻿namespace GeneticAlgorithm {
 
-    public interface IChromosome {
+	public interface IChromosome {
 		
-        double? Fitness { get; set; }
+		double? Fitness { get; set; }
 
-        int Length { get;  }
+		int Length { get;  }
 
-       
-        IChromosome Clone();
+	   
+		IChromosome Clone();
 
-        void SetGene(int index, IGene gene);
+		void SetGene(int index, IGene gene);
 
-        IGene GetGene(int index);
+		IGene GetGene(int index);
 
-    }
+	}
 
 }

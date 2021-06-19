@@ -2,10 +2,10 @@
 
 namespace GeneticAlgorithm {
 
-    public interface ICrossover {
+	public interface ICrossover {
 		
-        IList<IChromosome> Crossover(IChromosome firstParent, IChromosome secondParent);
+		IList<IChromosome> Crossover(IChromosome firstParent, IChromosome secondParent);
 
-    }
+	}
 
 }

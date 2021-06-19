@@ -2,10 +2,10 @@
 
 namespace GeneticAlgorithm {
 
-    public interface IMigration {
+	public interface IMigration {
 		
-        IChromosome Migrate(IChromosome chromosome, IList<IChromosome> targetChromosomes);
+		IChromosome Migrate(IChromosome chromosome, IList<IChromosome> targetChromosomes);
 
-    }
+	}
 
 }

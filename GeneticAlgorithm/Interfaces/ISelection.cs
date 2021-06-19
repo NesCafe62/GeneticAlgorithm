@@ -2,10 +2,10 @@
 
 namespace GeneticAlgorithm {
 
-    public interface ISelection {
+	public interface ISelection {
 		
-        IList<IChromosome> SelectChromosomes(int count, IList<IChromosome> chromosomes);
+		IList<IChromosome> SelectChromosomes(int count, IList<IChromosome> chromosomes);
 
-    }
+	}
 
 }

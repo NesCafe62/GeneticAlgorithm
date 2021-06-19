@@ -1,9 +1,9 @@
 ﻿namespace GeneticAlgorithm {
 
-    public interface IMutation {
+	public interface IMutation {
 		
-        void Mutate(IChromosome chromosome);
+		void Mutate(IChromosome chromosome);
 		
-    }
+	}
 
 }

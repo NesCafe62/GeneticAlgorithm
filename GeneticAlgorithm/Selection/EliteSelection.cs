@@ -3,14 +3,14 @@ using System.Linq;
 
 namespace GeneticAlgorithm {
 
-    class EliteSelection : ISelection {
+	class EliteSelection : ISelection {
 
-        public IList<IChromosome> SelectChromosomes(int count, IList<IChromosome> chromosomes) {
-            return chromosomes.OrderByDescending(c => c.Fitness.Value)
-                .Take(count)
-                .ToList();
-        }
+		public IList<IChromosome> SelectChromosomes(int count, IList<IChromosome> chromosomes) {
+			return chromosomes.OrderByDescending(c => c.Fitness.Value)
+				.Take(count)
+				.ToList();
+		}
 		
-    }
+	}
 
 }

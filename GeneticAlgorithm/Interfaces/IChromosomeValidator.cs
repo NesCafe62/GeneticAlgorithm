@@ -1,9 +1,9 @@
 ﻿namespace GeneticAlgorithm {
 
-    public interface IChromosomeValidator {
+	public interface IChromosomeValidator {
 		
-        bool Validate(IChromosome chromosome);
+		bool Validate(IChromosome chromosome);
 
-    }
+	}
 
 }

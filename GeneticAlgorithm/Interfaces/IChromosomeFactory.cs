@@ -1,9 +1,9 @@
 ﻿namespace GeneticAlgorithm {
 
-    public interface IChromosomeFactory {
+	public interface IChromosomeFactory {
 		
-        IChromosome CreateNew();
+		IChromosome CreateChromosome();
 
-    }
+	}
 
 }
