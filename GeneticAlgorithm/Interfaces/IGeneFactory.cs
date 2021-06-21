@@ -1,8 +1,8 @@
 ﻿namespace GeneticAlgorithm {
 	
-	public interface IGeneFactory<T> where T : IGene {
+	public interface IGeneFactory {
 		
-		T CreateGene(int index);
+		IGene CreateGene(int index);
 
 	}
 

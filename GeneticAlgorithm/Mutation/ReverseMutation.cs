@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace GeneticAlgorithm {
 
-	class ReverseMutation<T> : IMutation where T : IGene {
+	class ReverseMutation : IMutation {
 		
 		protected Random Random;
 
@@ -29,7 +29,7 @@ namespace GeneticAlgorithm {
 				toIndex = temp;
 			}
 
-			List<IGene> genes = new List<IGene>(toIndex - fromIndex + 1);
+			var genes = new List<IGene>(toIndex - fromIndex + 1);
 			
 			for (int i = fromIndex; i <= toIndex; i++) {
 				genes.Add(chromosome.GetGene(i));

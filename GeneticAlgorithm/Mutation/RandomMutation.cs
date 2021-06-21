@@ -2,13 +2,13 @@
 
 namespace GeneticAlgorithm {
 
-	class RandomMutation<T> : IMutation where T : IGene  {
+	class RandomMutation : IMutation {
 		
-		protected IGeneFactory<T> Factory;
+		protected IGeneFactory Factory;
 
 		protected Random Random;
 
-		public RandomMutation(IGeneFactory<T> factory, Random random) {
+		public RandomMutation(IGeneFactory factory, Random random) {
 			Factory = factory;
 			Random = random;
 		}

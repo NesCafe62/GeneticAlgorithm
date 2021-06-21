@@ -2,7 +2,7 @@
 
 namespace GeneticAlgorithm {
 
-	class SwapMutation<T> : IMutation  where T : IGene {
+	class SwapMutation : IMutation {
 		
 		protected Random Random;
 		

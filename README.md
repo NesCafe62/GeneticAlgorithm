@@ -69,7 +69,7 @@ class MyFitness : IFitness {
 
 It can be two separate classes or just one single class
 ```cs
-class MyChromosomeFactory : IChromosomeFactory, IGeneFactory<MyGene> {
+class MyChromosomeFactory : IChromosomeFactory, IGeneFactory {
 
     private int count;
     
@@ -90,7 +90,7 @@ class MyChromosomeFactory : IChromosomeFactory, IGeneFactory<MyGene> {
         return random.Next(minValue, maxValue);
     }
 
-    public MyGene CreateGene(int index) {
+    public IGene CreateGene(int index) {
         return new MyGene(GenerateGene(index));
     }
 
@@ -238,19 +238,19 @@ Takes winner chromosome (by fitness function) to new generation from each tourna
 
 # Mutation operators
 
-## RandomMutation<T>(IGeneFactory<T> factory, Random random) where T : IGene
+## RandomMutation(IGeneFactory factory, Random random)
 
 `factory`: gene factory
 
 ...
 
 
-## SwapMutation<T>(Random random) where T : IGene
+## SwapMutation(Random random)
 
 ...
 
 
-## ReverseMutation<T>(Random random) where T : IGene
+## ReverseMutation(Random random)
 
 ...
 
