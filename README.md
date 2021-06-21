@@ -6,7 +6,7 @@ Genetic algorithm library wtitten in С#
 
 ## Define gene, chromosome and fitness function
 
-Fitness function higher values treated as better
+Fitness function higher values treated as better. Calculate fintess can return any values even negative. Except if you use RouletteWheelSelection, in that case values need to be more than zero.
 ```cs
 class MyGene : IGene {
 
@@ -17,7 +17,6 @@ class MyGene : IGene {
     }
     
 } 
-
 
 class MyChromosome : IChromosome {
 
@@ -60,6 +59,20 @@ class MyFitness : IFitness {
              }
         }
         return counter;
+    }
+
+}
+```
+
+## Define chromosome validator (optional)
+
+```cs
+class MyChromosomeValidator : IChromosomeValidator {
+
+    public bool Validate(IChromosome chromosome) {
+        var myChromosome = (MyChromosome) chromosome;
+        // some validation logic here
+        return true;
     }
 
 }
@@ -152,6 +165,10 @@ var options = new GeneticAlgorithmOptions {
     Mutation = new RandomMutation<MyGene>(geneFactory, new Random()),
     // Mutation = new SwapMutation<MyGene>(new Random()),
     // Mutation = new ReverseMutation<MyGene>(new Random()),
+
+    // [optional]
+    // default value: EmptyValidator
+    Validator = new MyChromosomeValidator(),
 
     // delegate function (event) that will be executed after each algorithm iteration
     // [optional]
