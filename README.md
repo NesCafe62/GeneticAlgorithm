@@ -1,5 +1,6 @@
 # GeneticAlgorithm
-Genetic algorithm library wtitten in С#
+
+Lightweight genetic algorithm library wtitten in С# with ability to customize operators and define own
 
 
 # Usage
