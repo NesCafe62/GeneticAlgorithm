@@ -13,7 +13,7 @@ class MyGene : IGene {
 
     public int Value;
     
-    public SolutionGene(int value) {
+    public MyGene(int value) {
         Value = value;
     }
     
@@ -27,7 +27,7 @@ class MyChromosome : IChromosome {
     
     public int[] Values;
 
-    public Solution(int[] values) {
+    public MyChromosome(int[] values) {
         Values = values;
         Length = Values.Length;
     }
@@ -93,7 +93,7 @@ class MyChromosomeFactory : IChromosomeFactory, IGeneFactory {
     
     private Random random;
 
-    public SolutionFactory(int count, int minValue, int maxValue, Random random) {
+    public MyChromosomeFactory(int count, int minValue, int maxValue, Random random) {
         this.count = count;
         this.minValue = minValue;
         this.maxValue = maxValue;
